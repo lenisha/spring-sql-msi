@@ -16,6 +16,9 @@ az sql server ad-admin create --display-name odbcidentity --object-id <MI object
   "type": "Microsoft.Sql/servers/administrators"
 }
 ```
+After creation verify that identity was added automatically to `master` database users
+
+![docs](./identity.png)
 
 - set connection string in the `application.properties` with 1authentication=ActiveDirectoryMSI;msiClientId=<MI id>`
 ```
