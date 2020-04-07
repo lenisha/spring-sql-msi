@@ -20,7 +20,7 @@ After creation verify that identity was added automatically to `master` database
 
 ![docs](./identiy.png)
 
-- set connection string in the `application.properties` with 1authentication=ActiveDirectoryMSI;msiClientId=<MI id>`
+- set connection string in the `application.properties` with `authentication=ActiveDirectoryMSI;msiClientId=<MI appid>`
 ```
 spring.datasource.url=jdbc:sqlserver://testmetoday.database.windows.net:1433;database=testae;authentication=ActiveDirectoryMSI;msiClientId=<MI app id>;Encrypt=true;TrustServerCertificate=false;HostNameInCertificate=*.database.windows.net;loginTimeout=30
 ```
