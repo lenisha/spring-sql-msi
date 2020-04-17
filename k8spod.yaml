@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+
+  labels:
+    run: testmsi
+  name: testmsi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: testmsi
+  template:
+    metadata:
+      labels:
+        run: testmsi
+        aadpodidbinding: odbcidentity
+    spec:
+      containers:
+      - image: radial/busyboxplus:curl
+        name: testmsi
+        args:
+          - sleep
+          - "1000000"

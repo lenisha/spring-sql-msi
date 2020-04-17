@@ -19,7 +19,7 @@ public class SqlmsiApplication { //implements CommandLineRunner {
 
 	
 	@Bean
-    public CommandLineRunner demo(DataSource ds) {
+  public CommandLineRunner demo(DataSource ds) {
     return (args) -> {
         
 		
